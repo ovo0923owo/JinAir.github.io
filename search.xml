@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>佳仪的笔记(1-6)</title>
+    <url>/2021/09/09/%E4%BD%B3%E4%BB%AA%E7%9A%84%E7%AC%94%E8%AE%B0(1-6)/</url>
+    <content><![CDATA[<h1 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h1><h2 id="一般C语言程序的结构"><a href="#一般C语言程序的结构" class="headerlink" title="一般C语言程序的结构"></a>一般C语言程序的结构</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//  整数 int </span></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;	</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//  浮点数 double精度高 float 精度低 </span></span><br><span class="line">	<span class="keyword">double</span> b = <span class="number">1.5</span>;</span><br><span class="line">	<span class="keyword">float</span> c = <span class="number">2.42</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//  字符 char</span></span><br><span class="line">	<span class="keyword">char</span> d = <span class="string">&#x27;&gt;&#x27;</span>; <span class="comment">//  变量d表示字符&gt;</span></span><br><span class="line">	</span><br><span class="line">    	<span class="comment">// 标识符: 字母+数字+下划线_ 只能由字母或下划线_开头</span></span><br><span class="line">	<span class="keyword">int</span> lujiayi = <span class="number">18</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//  printf(&quot;里面的打印到屏幕上&quot;); </span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//     \n   换行 </span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">// %d  整数int</span></span><br><span class="line">	<span class="comment">// %f  小数float  %lf double</span></span><br><span class="line">	<span class="comment">// %c  字符char </span></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d     \n&quot;</span>, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lf  %f   \n&quot;</span>, b, c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c     \n&quot;</span>, d);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// % 模运算(取余数) </span></span><br><span class="line">	<span class="keyword">int</span> t = <span class="number">25</span> % <span class="number">7</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;t = %d     \n&quot;</span>, t); </span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* 如果两个操作数中有一个是double型</span></span><br><span class="line"><span class="comment">	另一个操作数就会转换为double型 */</span> </span><br><span class="line">	<span class="keyword">double</span> f = <span class="number">50</span>;</span><br><span class="line">	<span class="keyword">double</span> c;</span><br><span class="line">	<span class="comment">//c = 5.0 / 9.0;</span></span><br><span class="line">	c = <span class="number">5</span> / <span class="number">9.0</span> * (f - <span class="number">32</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;c = %lf    \n&quot;</span>, c);</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h1><h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>二进制：满二进一<br>1为真 0为假</p>
+<blockquote>
+<p>非!<br>☸!n (n不等于0) = 0<br>☸!0 = 1</p>
+</blockquote>
+<p>位运算：<br>(一)与&amp;        </p>
+<blockquote>
+<p>按位与<br>☸1 &amp; 1 = 1<br> ☸1 &amp; 0 = 0<br> ☸0 &amp; 0 = 0</p>
+</blockquote>
+<p>(二)或|          </p>
+<blockquote>
+<p>按位或<br> ☸1 | 1 = 1<br>  ☸1 | 0 = 1<br>  ☸0 | 0 = 0</p>
+</blockquote>
+<p>(三)异或^     </p>
+<blockquote>
+<p>按位异或<br>☸1 ^ 1 = 0<br>☸1 ^ 0 = 1<br>☸0 ^ 0 = 0</p>
+</blockquote>
+<p>(四)非~         </p>
+<blockquote>
+<p>按位取反 ~n = -n - 1</p>
+</blockquote>
+<p>(五)左移&lt;&lt;   </p>
+<blockquote>
+<p>左边丢失右边补0 左移1位 等价于 *2</p>
+</blockquote>
+<p>(六)右移&gt;&gt;</p>
+<blockquote>
+<p>右边丢失左边补0 右移1位 等价于 /2</p>
+</blockquote>
+<hr>
+<h1 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h1><h2 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h2><p>ASCII码：在计算机中每一个拉丁文字字母用一个0～127的数字表示<br>特点：</p>
+<blockquote>
+<p>0-9 连续（48 ~ 57）<br>a-z连续（97 ~ 122）<br>A-Z连续（65 ~ 90）</p>
+</blockquote>
+<p>转义字符：<br>‘\n’ 换行<br>‘&#39;‘ 单引号<br>‘\‘ 反斜杠<br>‘&quot;‘双引号<br>printf(“%%”) 输出%</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> x = <span class="string">&#x27;m&#x27;</span>; <span class="comment">//字符型变量d的值为字符&#x27;A&#x27;</span></span><br><span class="line">	<span class="keyword">char</span> y = <span class="string">&#x27;F&#x27;</span>;</span><br><span class="line">	<span class="keyword">int</span> d = y - x;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d    \n&quot;</span>, d);	<span class="comment">//%d输出字符的ASCII码: m = 109 F = 70 结果-39</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//int a = 0;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入a的值:&quot;</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//scanf(&quot;&quot;,&amp;); 用来输入 </span></span><br><span class="line">	<span class="comment">//不要在scanf的格式字符串中加入\n </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a);	<span class="comment">//&amp;必须加 </span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">double</span> b = <span class="number">0.0</span>;</span><br><span class="line">	</span><br><span class="line"> 	<span class="built_in">scanf</span>(<span class="string">&quot;%d%lf&quot;</span>,&amp;a, &amp;b); </span><br><span class="line"> 	<span class="built_in">printf</span>(<span class="string">&quot;a = %d, b = %lf&quot;</span>, a, b); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="练习：温度转换"><a href="#练习：温度转换" class="headerlink" title="练习：温度转换"></a>练习：温度转换</h2><p>编写一个程序，用于预测冰箱断电后经过时间t（以小时为单位，可以是小数）后的温度T<br>已知计算公式为 T = 4 * T * T / (t + 2) - 2<br>输入两个整数h和m分别表示断电后的小时和分钟<br>输出冰箱断电后经过时间t（以小时为单位）后的温度T，保留两位小数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> h = <span class="number">0</span>;	<span class="comment">//小时 </span></span><br><span class="line">	<span class="keyword">int</span> m = <span class="number">0</span>;	<span class="comment">//分钟 </span></span><br><span class="line">	<span class="comment">//输入两个整数h和m </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;h ,&amp;m);</span><br><span class="line">	<span class="comment">//经过时间t小时后 </span></span><br><span class="line">	<span class="keyword">double</span> t = h + (m / <span class="number">60.0</span>);</span><br><span class="line"> 	<span class="keyword">double</span> T = (<span class="number">4.0</span> * t * t) / (t + <span class="number">2</span>) - <span class="number">20</span>;</span><br><span class="line"> 	<span class="built_in">printf</span>(<span class="string">&quot;冰箱断电后经过时间t后的温度T=%.2lf\n&quot;</span>, T);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>等于 ==<br>不等于 !=<br>并且 &amp;&amp;<br>或者 || </p>
+</blockquote>
+<h2 id="特殊运算符"><a href="#特殊运算符" class="headerlink" title="特殊运算符"></a>特殊运算符</h2><p><strong>三目运算符</strong><br>(表达式1)?(表达式2):(表达式3)<br>如果表达式1为真就计算表达式2，表达式1为假就计算表达式3，并作为整个表达式的值</p>
+<p><strong>单目运算符</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">//--同理</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">	<span class="comment">//x++;	//在原来的基础上加1 </span></span><br><span class="line">	<span class="comment">//++x;	//在原来的基础上加1</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;x = %d\n&quot;</span>, x++); 	<span class="comment">//x++最后加一 </span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;x = %d\n&quot;</span>, x);		<span class="comment">//++x最先加一 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>判断闰年：年份能够被400整除，或者年份能够被4整除并且不能被100整除</p>
+<blockquote>
+<p>year % 400 == 0 || (year % 4 == 0 &amp;&amp; year % 100 != 0)</p>
+</blockquote>
+<hr>
+<h1 id="第五天"><a href="#第五天" class="headerlink" title="第五天"></a>第五天</h1><h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p>三种结构</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x = <span class="number">5</span>;</span><br><span class="line">    <span class="comment">//if - else 结构</span></span><br><span class="line">	<span class="keyword">if</span>(x &lt; <span class="number">4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;成立\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;不成立\n&quot;</span>); </span><br><span class="line">	&#125; </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//if - else if 结构</span></span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;4\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(x == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;1\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(x == <span class="number">5</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;5\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//if - else if - else 结构</span></span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">4</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;4\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(x == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;1\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;都不是\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h3><blockquote>
+<p>编写程序，接受用户输入的整数，如果该整数为奇数则将其乘 3 加 1 后输出，偶数直接输出</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, result;</span><br><span class="line">    <span class="comment">/* 输入部分 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The program gets a number.\nIf it is an even, output it directly, \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;otherwise multiply it by 3 then plus 1.\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The number: &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d &quot;</span>, &amp;a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 计算部分 */</span></span><br><span class="line">    result = a;</span><br><span class="line">    <span class="keyword">if</span> (a % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">        result = a * <span class="number">3</span> + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 输出部分 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The result is %d.\n&quot;</span>, result);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h3><blockquote>
+<p>编写程序，接受用户输入的整数，如果该整数为奇数则将其乘 3 加 1 后输出，偶数除以 2 后输出</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, result;</span><br><span class="line">    <span class="comment">/* 输入部分 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The program gets a number.\nIf it is an even, divide it by 2, \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;otherwise multiply it by 3 then plus 1.\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The number: &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d &quot;</span>, &amp;a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 计算部分 */</span></span><br><span class="line">    <span class="keyword">if</span> (a % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">        result = a * <span class="number">3</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> result = a / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 输出部分 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The result is %d.\n&quot;</span>, result);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="练习3"><a href="#练习3" class="headerlink" title="练习3"></a>练习3</h3><blockquote>
+<p>从键盘输入三个整数，计算其中的最大值并将其输出</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b, c, max;</span><br><span class="line">    <span class="comment">/* 输入部分 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;该程序从键盘获取3个整数，输出最大值。 \n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入3个数: \n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d&quot;</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 计算部分 */</span></span><br><span class="line">    <span class="keyword">if</span> (a &gt; b)</span><br><span class="line">        max = a;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        max = b;</span><br><span class="line">    <span class="keyword">if</span> (c &gt; max) max = c;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 输出部分 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;最大值为： %d.\n&quot;</span>, max);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2><p>==break: 从switch中跳出 截断==</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; 	</span><br><span class="line">	<span class="keyword">int</span> day;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;day);</span><br><span class="line">	<span class="comment">//整型 </span></span><br><span class="line">	<span class="keyword">switch</span> (day)	<span class="comment">//选择 入口 </span></span><br><span class="line">	&#123; 	</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>: <span class="built_in">printf</span>( <span class="string">&quot;Sunday &quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>: <span class="built_in">printf</span>( <span class="string">&quot;Monday&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>: <span class="built_in">printf</span>( <span class="string">&quot;Tuesday&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>: <span class="built_in">printf</span>( <span class="string">&quot;Wednesday&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>: <span class="built_in">printf</span>( <span class="string">&quot;Thursday&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>: <span class="built_in">printf</span>( <span class="string">&quot;Friday&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span>: <span class="built_in">printf</span>( <span class="string">&quot;Saturday&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//默认入口 其他入口都不能进入时 </span></span><br><span class="line">		<span class="keyword">default</span>: <span class="built_in">printf</span>( <span class="string">&quot;Input error&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> switch计算过程</p>
+<blockquote>
+<p>❁先计算整型表达式的值<br>❁依次与常数表达式比较<br>❁若相同则执行该分支（子句）<br>❁否则转向 default 分支<br>❁最后退出 switch语句</p>
+</blockquote>
+<p>==特别说明==</p>
+<blockquote>
+<p>switch 后面的表达式必须为整型、字符型，case 后面必须为常量表达式，且各个case 值必须不同，case分支中的语句可以有多条，不需要花括号</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//字符型</span></span><br><span class="line">	<span class="keyword">switch</span> (<span class="string">&#x27;&gt;&#x27;</span>)	</span><br><span class="line">	&#123; 	</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;&gt;&#x27;</span>: </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot; &gt; &quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;&lt;&#x27;</span>: </span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot; &lt; &quot;</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>: <span class="built_in">printf</span>(<span class="string">&quot;啥也不是&quot;</span>); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h1><p>二进制最高位为符号位：0表示正 1表示负<br>正数：原码反码补码相同<br>负数：最高位符号位为1 反码为原码除符号位按位取反 补码为反码加1</p>
+<p><strong>举个栗子</strong></p>
+<blockquote>
+<p>+13的8位二进制表示为 0000 1101<br>原码：0000 1101<br>反码：0000 1101<br>补码：0000 1101</p>
+</blockquote>
+<blockquote>
+<p>-14的8位二进制表示为 1000 1110<br>原码：1000 1110<br>反码：1111 0001<br>补码：1111 0010</p>
+</blockquote>
+<h2 id="有符号整型与无符号整型的区别"><a href="#有符号整型与无符号整型的区别" class="headerlink" title="有符号整型与无符号整型的区别"></a>有符号整型与无符号整型的区别</h2><p>以2字节 int 与 unsigned int 为例<br>1字节(Byte) = 8 位(Bit)<br>这里假设int在电脑内存上占用的连续空间为2字节(16位)<br>==在计算机系统中一律用<strong>补码</strong>存数据==</p>
+<blockquote>
+<p>0000 0000 0000 0000 (共16位 = 2字节)</p>
+</blockquote>
+<p>由于 int 是有符号整型，所以最高位为符号位</p>
+<blockquote>
+<p>+13 ：0000 0000 0000 1101</p>
+<p>-14：1000 0000 0000 1101</p>
+</blockquote>
+<p>由于16位中最高位(最左)用来表示符号(0为正1为负)，所以只有15位能够用来表示数的大小 位权从右到左依次为2^0 ~ 2^14，当所有位都为1的时候表示的数最大</p>
+<blockquote>
+<p>(补码) 0111 1111 1111 1111 = 2^0 + .. + 2^14 = 2^15-1</p>
+</blockquote>
+<p>同理 </p>
+<blockquote>
+<p>(补码) 1000 0000 0000 0000 = -2^15</p>
+</blockquote>
+<p>-2^15^的补码为1000 0000 0000 0000。如果按正常的补码运算，转换为原码为0000 0000 0000 0000。其实是0，但因为+0和-0的补码都是0000 0000 0000 0000，就多出了一个补码，所以人为规定1000 0000 0000 0000为-32768</p>
+<h2 id="常用变量类型取值范围"><a href="#常用变量类型取值范围" class="headerlink" title="常用变量类型取值范围"></a>常用变量类型取值范围</h2><blockquote>
+<p>int(4字节)：-2^31 ~ 2^31-1<br>long long(8字节)：-2^63 ~ 2^63 - 1</p>
+</blockquote>
+<hr>
+]]></content>
+      <categories>
+        <category>C语言学习笔记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>佳仪的笔记(7)</title>
+    <url>/2021/09/10/%E4%BD%B3%E4%BB%AA%E7%9A%84%E7%AC%94%E8%AE%B0(7)/</url>
+    <content><![CDATA[<h1 id="第七天"><a href="#第七天" class="headerlink" title="第七天"></a>第七天</h1><h2 id="运算符号缩写"><a href="#运算符号缩写" class="headerlink" title="运算符号缩写"></a>运算符号缩写</h2><p>x = x + 1 缩写为 x += 1<br>x = x - 2 缩写为 x -= 2<br>x = x * 3 缩写为 x *= 3<br>x = x / 4 缩写为 x /= 4<br>x = x % 5 缩写为 x %= 5<br>&amp;、|、^、&lt;&lt;、&gt;&gt;符号同理</p>
+<h2 id="位运算专题"><a href="#位运算专题" class="headerlink" title="位运算专题"></a>位运算专题</h2><p>位运算的效率<strong>远高于</strong>常规运算(四则运算等)</p>
+<h3 id="判断奇偶数"><a href="#判断奇偶数" class="headerlink" title="判断奇偶数"></a>判断奇偶数</h3><blockquote>
+<p>一般解法</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>( n % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// n 是个偶数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>( n % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// n 是个奇数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用 &amp;</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// == 的优先级高于 &amp;，所以要把 n &amp; 1 加上括号</span></span><br><span class="line"><span class="keyword">if</span>((n &amp; <span class="number">1</span>) == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// n 是个偶数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>((n &amp; <span class="number">1</span>) == <span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// n 是个奇数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原理：</p>
+<blockquote>
+<p>奇数的二进制最后一位数为 1<br>偶数的二进制最后一位数为 0</p>
+</blockquote>
+<p>举个栗子：<br>5 的二进制表示为 0101<br>12的二进制表示为 1100</p>
+<p>5 &amp; 1 = 0101 &amp; 1 = 0101 &amp; 0001 = 0001 = 1<br>12 &amp; 1 = 1100 &amp; 1 = 1100 &amp; 0001 = 0000 = 0</p>
+<h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><p>x 和 y 的值互换</p>
+<blockquote>
+<p>一般解法</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> tmp = x;</span><br><span class="line">x = y;</span><br><span class="line">y = tmp;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>使用 ^</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">x = x ^ y	<span class="comment">//(1)</span></span><br><span class="line">y = x ^ y	<span class="comment">//(2)</span></span><br><span class="line">x = x ^ y 	<span class="comment">//(3)</span></span><br></pre></td></tr></table></figure>
+<p>原理：<br>其实现基于异或运算的如下性质：</p>
+<blockquote>
+<p>🍤可交换性：a ^ b = b ^ a<br>🍤可结合性：a ^ b ^ c = (a ^ b) ^ c = a ^ (b ^ c)<br>🍤自身进行异或运算值为零：a ^ a = 0<br>🍤与 0 异或时结果不变：a ^ 0 = a</p>
+</blockquote>
+<p>举个栗子：<br>x = 7<br>y = 12<br>x 的二进制表示为 0111<br>y 的二进制表示为 1100<br>(1)式：x = 0111 ^ 1100 = 1011<br>(2)式：y = 1011 ^ 1100 = 0111<br>(3)式：x = 1011 ^ 0111 = 1100<br>完成x与y的值的交换</p>
+<blockquote>
+<p>进阶：x ^= y ^= x ^= y</p>
+</blockquote>
+<h3 id="消去数x的二进制表示下的最右的1"><a href="#消去数x的二进制表示下的最右的1" class="headerlink" title="消去数x的二进制表示下的最右的1"></a>消去数x的二进制表示下的最右的1</h3><blockquote>
+<p>x &amp; (x - 1)</p>
+</blockquote>
+<p>举个栗子：<br>x = 1100<br>x - 1 = 1011<br>x &amp; (x - 1) = 1000<br>消去了最右的1</p>
+<h3 id="移位"><a href="#移位" class="headerlink" title="移位"></a>移位</h3><p>一般的语言只支持算术移位，不支持逻辑移位</p>
+<h4 id="算术左移-lt-lt"><a href="#算术左移-lt-lt" class="headerlink" title="算术左移&lt;&lt;"></a>算术左移&lt;&lt;</h4><blockquote>
+<p>左移<strong>n</strong>位相当于将这个数乘<strong>2^n</strong>(无论正负)<br>把二进制表示下的每一位向左移n位，左边溢出的值丢失，右边补0</p>
+</blockquote>
+<p>举个栗子：<br>x = 23 的二进制表示为 0001 0111<br>左移一位：<br>x = x &lt;&lt; 1 缩写为：x &lt;&lt;= 1<br>0001 0111 &lt;&lt; 1 = 0010 1110(正数原码反码补码同型)<br>0010 1110 = 46 = 23 * 2</p>
+<blockquote>
+<p>总结：左高右低，丢弃高位，0补低位</p>
+</blockquote>
+<h4 id="算术右移-gt-gt"><a href="#算术右移-gt-gt" class="headerlink" title="算术右移&gt;&gt;"></a>算术右移&gt;&gt;</h4><blockquote>
+<p>右移<strong>n</strong>位相当于将这个数除以<strong>2^n</strong>(无论正负)<br>把二进制表示下的每一位向右移n位，右边溢出的值丢失<br><strong>左边正数补0，负数补1</strong></p>
+</blockquote>
+<p>举个栗子：<br>x = -19 的二进制表示为 1001 0011(原码)<br>原码-&gt;反码：1110 1100<br>反码-&gt;补码：1110 1101<br>右移两位：<br>x = x &gt;&gt; 2 缩写为：x &gt;&gt;= 2<br>1110 1101 &gt;&gt; 2 = 1111 1011(补码)<br>补码-&gt;反码：1111 1010<br>反码-&gt;原码：1000 0101<br>1000 0101 = -5</p>
+<blockquote>
+<p>总结：左高右低，丢弃低位，高位正数补0，负数补1</p>
+</blockquote>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>移动的位数超过类型的长度时，编译器会用左移的位数去模类型的最大位数，然后按余数进行移位</p>
+</blockquote>
+<p>int 占4个字节32位<br>右移4位：4 % 32 = 4<br>右移32位：32 % 32 = 0 也就是不变<br>右移35位，35 % 32 = 3 等价于右移3位</p>
+<h2 id="模运算法则"><a href="#模运算法则" class="headerlink" title="模运算法则"></a>模运算法则</h2><p>a，b，m 皆为整型</p>
+<blockquote>
+<p>加法：(a + b) % m = (a % m + b % m) % m<br>减法：(a - b) % m = (a % m - b % m) % m<br>乘法：(a * b) % m = (a % m * b % m) % m<br>除法：(a / b) % m = (a % ( m * b)) / b<br>证明过程如下，可做了解<br><img src="https://img-blog.csdnimg.cn/a1e0583cc17f4f7baa73ae98d22c7fac.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+</blockquote>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><p>先从我们最熟悉的十进制入手吧，其他进制与十进制的转换方法都是一样的，保证能全部记住！</p>
+<blockquote>
+<p>整型有4种进制形式：<br>1.十进制： 都是以 0-9 这九个数字组成，不能以0开头<br>2.二进制： 由 0 和 1 两个数字组成<br>3.八进制： 由 0-7 数字组成，为了区分与其他进制的数字区别，开头都是以0开始<br>4.十六进制：由 0-9 和 A-F 组成，为了区分于其他数字的区别，开头都是以0x开始</p>
+</blockquote>
+<h3 id="整数转换"><a href="#整数转换" class="headerlink" title="整数转换"></a>整数转换</h3><p><img src="https://img-blog.csdnimg.cn/e4f0783740d544ee90b23801d89ed726.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="10进制转2进制"><a href="#10进制转2进制" class="headerlink" title="10进制转2进制"></a>10进制转2进制</h4><p>转换原理：除以2，反向取余数，直到商为0终止</p>
+<blockquote>
+<p>(1)将某个十进制数除2得到的整数部分保留，作为第二次除2时的被除数，得到的余数依次记下<br>(2)重复上述步骤，直到整数部分为0就结束，将所有得到的余数最终逆序输出，则为该十进制对应的二进制数</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/6e58564f436448fab0332674d7e71b4a.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>9(10) = 1001(2)</p>
+<h4 id="10进制转8进制"><a href="#10进制转8进制" class="headerlink" title="10进制转8进制"></a>10进制转8进制</h4><p>转换原理：除以8，反向取余数，直到商为0终止</p>
+<blockquote>
+<p>例如：十进制数796转换成八进制数：<br>将796除8取得第一个余数为4，将除8得到的整数部分99作为第二次的被除数，重复上述步骤，直至最终整数部分为0就结束。将取得的所有余数逆序输出</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/6800824ad10c48fe9b4fccc65df3aa70.png#pic_center" alt="在这里插入图片描述"><br>796(10) = 1434(8)</p>
+<h4 id="10进制转16进制"><a href="#10进制转16进制" class="headerlink" title="10进制转16进制"></a>10进制转16进制</h4><p>转换原理：除以16，反向取余数，直到商为0终止</p>
+<blockquote>
+<p>需要注意的是：十六进制数是由0-9和A-F(或者a-f)组成的，A相当于十进制中的10，B相当于11，依次类推，F相当与15，上述事例中取得的余数12即为十六进制中的c<br><img src="https://img-blog.csdnimg.cn/6046e6a126494b3abc876d4e7f1cc3ef.png#pic_center" alt="在这里插入图片描述"></p>
+</blockquote>
+<h4 id="2进制、8进制、16进制转10进制"><a href="#2进制、8进制、16进制转10进制" class="headerlink" title="2进制、8进制、16进制转10进制"></a>2进制、8进制、16进制转10进制</h4><p><img src="https://img-blog.csdnimg.cn/5f569ba5374344f88c55e6ff999f31db.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="小数转换"><a href="#小数转换" class="headerlink" title="小数转换"></a>小数转换</h3><p><img src="https://img-blog.csdnimg.cn/389cb08b80c0489ba3da82467ade344c.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="10进制转2进制-1"><a href="#10进制转2进制-1" class="headerlink" title="10进制转2进制"></a>10进制转2进制</h4><p>转换原理：十进制小数转换成二进制小数采用<strong>乘2取整，顺序输出</strong></p>
+<blockquote>
+<p>例题： 0.68D = ______ B（精确到小数点后5位）<br>如下所示，0.68乘以2，取整，然后再将小数乘以2，取整，直到达到题目要求精度。得到结果：0.10101B.<br>例如：十进制小数0.68转换为二进制数<br>具体步骤：<br>0.68* 2=1.36 –&gt;1<br>0.36* 2=0.72 –&gt;0<br>0.72* 2=1.44 –&gt;1<br>0.44* 2=0.88–&gt;0<br>0.88* 2=1.76 –&gt;1<br>已经达到了题目要求的精度，最后将取出的整数部分顺序输出即可<br>则为：0.68D–&gt;0.10101B</p>
+</blockquote>
+<h4 id="10进制转8进制-1"><a href="#10进制转8进制-1" class="headerlink" title="10进制转8进制"></a>10进制转8进制</h4><p>转换原理：十进制小数转换成八进制小数采用<strong>乘8取整，顺序输出</strong></p>
+<blockquote>
+<p>例题： 10.68D = ______ Q（精确到小数点后3位）<br>解析：如下图所示，整数部分除以8取余数，直到无法整除。小数部分0.68乘以8，取整，然后再将小数乘以8，取整，直到达到题目要求精度。得到结果：12.534Q.<br>十进制数10.68转换成八进制数，分为整数部分和小数部分求解<br>步骤：<br>(1)整数部分<br>10/8=1 –&gt;2<br>1/8=0 –&gt;1<br>倒序输出为12<br>(2)小数部分<br>0.68* 8=5.44 –&gt;5<br>0.44* 8=3.52 –&gt;3<br>0.52* 8=4.16 –&gt;4<br>已经达到了题目要求的精度，即可结束<br>则小数部分为：0.68–&gt;0.534<br>因此10.68D –&gt;12.534Q</p>
+</blockquote>
+<h4 id="10进制转16进制-1"><a href="#10进制转16进制-1" class="headerlink" title="10进制转16进制"></a>10进制转16进制</h4><p>转换原理：十进制小数转换成十六进制小数采用<strong>乘16取整，顺序输出</strong></p>
+<blockquote>
+<p>例题： 25.68D = ______ H（精确到小数点后3位）<br>整数部分除以16取余数，直到无法整除。小数部分0.68乘以16，取整，然后再将小数乘以16，取整，直到达到题目要求精度。得到结果：19.AE1H.<br>（1）整数部分<br>25/16=1 –&gt;9<br>1/16=0 –&gt;1<br>倒序输出为：19<br>（2）小数部分<br>0.68* 16=10.88 –&gt;A(即十进制中的A)<br>0.88* 16=14.08 –&gt;E<br>0.08* 16=1.28 –&gt;1<br>已经达到了要求的精度，顺序输出为：AE1<br>则：25.68D –&gt;19.AE1H</p>
+</blockquote>
+<p><strong>总结：小数部分转换原理都是乘进制数取整数部分，再将整数部分顺序输出</strong></p>
+<h4 id="2进制转10进制"><a href="#2进制转10进制" class="headerlink" title="2进制转10进制"></a>2进制转10进制</h4><p>转换原理：整数部分按上述进行操作即可，小数部分从小数点后一位指数为-1开始算起，以后依次为-2、-3……<br><img src="https://img-blog.csdnimg.cn/683b9d1e341049c590c3785e290b9b76.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="8进制转10进制"><a href="#8进制转10进制" class="headerlink" title="8进制转10进制"></a>8进制转10进制</h4><p>转换原理：整数部分操作以及运算不变，小数部分同二进制类似，将2改为8即可</p>
+<blockquote>
+<p>例如：八进制数72.45转换成十进制数<br>步骤：<br>（1）整数部分：<br>7* 8^1+ 2* 8 ^0=58<br>（2）小数部分<br>4* 8^(-1) +5* 8 ^(-2)=0.5+0.078125=0.578125<br>则为：72.45 –&gt;58.578125</p>
+</blockquote>
+<p><strong>以上二进制、八进制、十六进制转换为十进制当中的整数部分从右往左指数从0开始递增，小数部分从左往右从-1开始递减，原理都是一样的</strong></p>
+<h4 id="16进制转10进制"><a href="#16进制转10进制" class="headerlink" title="16进制转10进制"></a>16进制转10进制</h4><p>转换：整数运算一样，小数部分换成16即可</p>
+<blockquote>
+<p>例：1A6.3B8=1* 16^2+A* 16 ^1+6* 16 ^0 +3* 16 ^(-1)+B* 16 ^(-2)+8* 16 ^(-3) =419.232422</p>
+</blockquote>
+<h3 id="二进制转换成八进制数、十六进制数"><a href="#二进制转换成八进制数、十六进制数" class="headerlink" title="二进制转换成八进制数、十六进制数"></a>二进制转换成八进制数、十六进制数</h3><p>1、二进制转换成八进制<br>原理：<strong>三合一</strong>取二进制数中的三位合为八进制数的一位</p>
+<p>2、二进制转换成十六进制<br>原理：<strong>四合一</strong>取二进制数中的四位合为十六进制数的一位</p>
+<blockquote>
+<p>举个栗子：<br>二进制数1010 0100B转换成八进制数为244Q 转换成十六进制数为A4H</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/68744a8bb80643699461fd2b524ea5ea.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_18,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/55fed4d4bf5a4d0db712e02116bcfbf1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_19,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/c4a0fd0b2a104bd28c79e4be52184fe5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_15,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="八进制、十六进制转换成二进制"><a href="#八进制、十六进制转换成二进制" class="headerlink" title="八进制、十六进制转换成二进制"></a>八进制、十六进制转换成二进制</h3><p>1、八进制数转换成二进制<br>原理：八进制数的一位是二进制数的三位</p>
+<p>2、十六进制数转换成二进制<br>原理：十六进制数的一位是二进制数的四位<br><img src="https://img-blog.csdnimg.cn/09049b0ef48a4666ab5268f005cbf221.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="八进制与十六进制之间的转换"><a href="#八进制与十六进制之间的转换" class="headerlink" title="八进制与十六进制之间的转换"></a>八进制与十六进制之间的转换</h3><p>这两者之间的转换可以借助十进制或者二进制完成，可以先将八进制转换成十进制或二进制，再转换成十六进制。通过间接转换来实现</p>
+<hr>
+<h3 id="❤"><a href="#❤" class="headerlink" title="❤"></a>❤</h3><p>宝贝，以上就是所有常用进制转换，包括整数部分和小数部分，已经是很详细了，我觉得通过例子来理解是最好的方法，记住进制转换的一些原理和规律，换成其他进制也是一样的用。关于进制转换问题是比较基础的，所以一定要掌握哦！<br>希望我的文章对你有所帮助，嘿嘿！</p>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/2d017d1b86e24ef8a3a95e250e7c96e5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>C语言学习笔记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>不含连续1的非负整数</title>
+    <url>/2021/09/11/%E4%B8%8D%E5%90%AB%E8%BF%9E%E7%BB%AD1%E7%9A%84%E9%9D%9E%E8%B4%9F%E6%95%B4%E6%95%B0/</url>
+    <content><![CDATA[<p>-字典树-<br>-动态规划-</p>
+<p><a href="https://leetcode-cn.com/problems/non-negative-integers-without-consecutive-ones/">传送门</a></p>
+<blockquote>
+<p>给定一个正整数 n，找出小于或等于 n 的非负整数中，其二进制表示不包含<strong>连续的1</strong>的个数。</p>
+</blockquote>
+<p>示例 1：<br>输入: 5<br>输出: 5<br>解释:<br>下面是带有相应二进制表示的非负整数&lt;= 5：<br>0 : 0<br>1 : 1<br>2 : 10<br>3 : 11<br>4 : 100<br>5 : 101<br>其中，只有整数3违反规则（有两个连续的1），其他5个满足规则。</p>
+<p>说明：1 &lt;= n &lt;= 10^9</p>
+<p>题解：</p>
+<blockquote>
+<p>(一) 01字典树</p>
+</blockquote>
+<p>因为正整数 n 可以取到 10^9 ，所以显然是不可能通过暴力遍历从 1 到 n 的所有正整数来计算答案的。可以感觉到，在暴力遍历的过程中，有非常多的计算是重复的。因此，考虑通过优化暴力遍历来解决这个问题</p>
+<p>为了形象地将重复计算的部分找出来，不妨将小于等于 n 的非负整数用 01 字典树的形式表示，其中的每一条从根结点到叶结点的路径都是一个小于等于 n 的非负整数（包含前导 0）</p>
+<p>于是，题目可以转化为：在由所有小于等于 n 的非负整数构成的 01 字典树中，找出不包含连续 1 的从根结点到叶结点的路径数量<br><img src="https://img-blog.csdnimg.cn/60892c46bbab481cbb3fb43237358da4.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>例如，沿最右边的路径一直往下，得到的就是 (110)2 ，也就是数字 6</p>
+<blockquote>
+<p>(二) 满二叉树的路径</p>
+</blockquote>
+<p>题目要求找到所有<strong>其二进制表示不包含连续的1</strong>的数字，也就是说，在 01 字典树的路径上，不能存在连续两个 1。这个问题本可以通过建树 + 搜索的方法解决，但是本题的数据范围为 1 &lt;= n &lt;= 10^9 ，会超时，所以要考虑一种不用穷举的方式来解决本题。</p>
+<p>我们以 n = 6 为例，它的左右子树均不为空，所以左子树是一棵满二叉树。</p>
+<p>可以发现，对于高度为 t，根节点为 0 的满二叉树中，其左右子树均是高度为 t - 1 的满二叉树，只是根节点分别为 0, 1。 考虑用 dp[k][t] 表示根节点为 k，高度为 t 的满二叉树中，满足题意的路径数量。那么就有：</p>
+<p>dp[0][t] = dp[0][t - 1] + dp[1][t - 1]</p>
+<p>另外发现，对于高度为 t，根节点为 1 的满二叉树，其右子树的根节点也为 1，那么其右子树上的路径均不满足题意，因为已经有连续两个 1 存在。所以，其路径数量仅仅取决于其左子树：</p>
+<p>dp[1][t] = dp[0][t - 1]</p>
+<p>将其代入上一个式子，我们便有：</p>
+<p>dp[0][t] = dp[0][t - 1] + dp[1][t - 1] = dp[0][t - 1] + dp[0][t - 2]</p>
+<p>综上所述，可以将高度为 t，根节点为 0 的满二叉树路径缩小到一维表示<br><img src="https://img-blog.csdnimg.cn/e9a8221b1eb043e8a89adcee1c45774a.png#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>(三) 非满二叉树的路径数量</p>
+</blockquote>
+<p><strong>如果该子树有右子树，说明其左子树是满二叉树</strong><br>已经求出了满二叉树中的路径数量，直接考虑其右子树即可。<br>同理，若该子树没有右子树，递归考虑其左子树即可。</p>
+<p>由于无法建树搜索，所以在代码中，上述过程需要通过<strong>位运算</strong>来求解</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">findIntegers</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// 预处理第 i 层满二叉树的路径数量</span></span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(<span class="number">31</span>)</span></span>;</span><br><span class="line">        dp[<span class="number">0</span>] = dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; <span class="number">31</span>; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// pre 记录上一层的根节点值，res 记录最终路径数</span></span><br><span class="line">        <span class="keyword">int</span> pre = <span class="number">0</span>, res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">29</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> val = <span class="number">1</span> &lt;&lt; i;</span><br><span class="line">            <span class="comment">// if 语句判断 当前子树是否有右子树</span></span><br><span class="line">            <span class="keyword">if</span> ((n &amp; val) != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 有右子树</span></span><br><span class="line">                n -= val;</span><br><span class="line">                res += dp[i + <span class="number">1</span>]; <span class="comment">// 先将左子树（满二叉树）的路径加到结果中</span></span><br><span class="line">                <span class="comment">// 处理右子树</span></span><br><span class="line">                <span class="keyword">if</span> (pre == <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 上一层为 1，之后要处理的右子树根节点肯定也为 1</span></span><br><span class="line">                    <span class="comment">// 此时连续两个 1，不满足题意，直接退出</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 标记当前根节点为 1</span></span><br><span class="line">                pre = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 无右子树，此时不能保证左子树是否为满二叉树，所以要在下一层再继续判断</span></span><br><span class="line">                pre = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++res;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>从高到低每局不同位，实际上就是在 01 字典树中从高到低枚举高度。如果 <strong>(n &amp; val) != 0</strong>，说明当前的 n 形成的字典树有右子树，此时左子树为满二叉树，其路径数已经求出，直接递归求解右子树 <strong>(n -= val)</strong> 即可</p>
+<p>以 n = 6 为例，当遍历到 i = 2 时，便是判断是否有高度为 2 的子树。此时计算得到的 val = 4 = (100)2，由于 n &amp; val = 100 != 0，说明当前 n = 6 的字典树是有右子树的。此时其左子树高度为3，根节点为 0 的满二叉树，路径数为 dp[3]，其右子树就是图中红框的部分，实际就是 n = 2 的 01 字典树，这可以通过 n = n - val 得到<br><img src="https://img-blog.csdnimg.cn/6751a7888a5b47d28494e0cc830ec052.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>如果当前没有右子树，此时并不能判断左子树是否为满二叉树，要留到下一层继续判断</p>
+<hr>
+]]></content>
+      <categories>
+        <category>刷题日记</category>
+      </categories>
+      <tags>
+        <tag>动态规划</tag>
+        <tag>字典树</tag>
+      </tags>
+  </entry>
+</search>
