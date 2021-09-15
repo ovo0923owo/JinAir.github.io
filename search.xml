@@ -126,13 +126,7 @@
     <url>/2021/09/12/%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
     <content><![CDATA[<p>-动态规划-<br>-栈-<br>-贪心-</p>
 <p><a href="https://leetcode-cn.com/problems/valid-parenthesis-string/">传送门</a></p>
-<blockquote>
-<p>给定一个只包含三种字符的字符串： (  ， ) 和 * ，写一个函数来检验这个字符串是否为有效字符串。有效字符串具有如下规则：<br>    1. 任何左括号 ( 必须有相应的右括号 )<br>    2. 任何右括号 ) 必须有相应的左括号 (<br>    3. 左括号 ( 必须在对应的右括号之前 )<br>    4. * 可以被视为单个右括号 ) ，或单个左括号 ( ，或一个空字符<br>    5. 一个空字符串也被视为有效字符串</p>
-</blockquote>
-<p>示例 1：<br>输入: “()”<br>输出: True</p>
-<p>示例 2：<br>输入: “(*)”<br>输出: True</p>
-<p>示例 3：<br>输入: “(*))”<br>输出: True</p>
-<p>注意：字符串大小将在 [1，100] 范围内。</p>
+<p><img src="https://img-blog.csdnimg.cn/da943bd7628e4477a0907baeee62d415.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <p>题解：</p>
 <blockquote>
 <p>方法一：动态规划</p>
@@ -335,11 +329,7 @@
     <url>/2021/09/11/%E4%B8%8D%E5%90%AB%E8%BF%9E%E7%BB%AD1%E7%9A%84%E9%9D%9E%E8%B4%9F%E6%95%B4%E6%95%B0/</url>
     <content><![CDATA[<p>-字典树-<br>-动态规划-</p>
 <p><a href="https://leetcode-cn.com/problems/non-negative-integers-without-consecutive-ones/">传送门</a></p>
-<blockquote>
-<p>给定一个正整数 n，找出小于或等于 n 的非负整数中，其二进制表示不包含<strong>连续的1</strong>的个数。</p>
-</blockquote>
-<p>示例 1：<br>输入: 5<br>输出: 5<br>解释:<br>下面是带有相应二进制表示的非负整数&lt;= 5：<br>0 : 0<br>1 : 1<br>2 : 10<br>3 : 11<br>4 : 100<br>5 : 101<br>其中，只有整数3违反规则（有两个连续的1），其他5个满足规则。</p>
-<p>说明：1 &lt;= n &lt;= 10^9</p>
+<p><img src="https://img-blog.csdnimg.cn/2705ff4982844e37a443dae4dfd2037e.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
 <p>题解：</p>
 <blockquote>
 <p>(一) 01字典树</p>
