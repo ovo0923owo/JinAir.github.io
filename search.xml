@@ -422,4 +422,35 @@
         <tag>回溯</tag>
       </tags>
   </entry>
+  <entry>
+    <title>佳仪的笔记(8)</title>
+    <url>/2021/09/26/%E4%BD%B3%E4%BB%AA%E7%9A%84%E7%AC%94%E8%AE%B0(8)/</url>
+    <content><![CDATA[<h1 id="第八天"><a href="#第八天" class="headerlink" title="第八天"></a>第八天</h1><h2 id="while-语句"><a href="#while-语句" class="headerlink" title="while 语句"></a>while 语句</h2><blockquote>
+<p>while(条件)<br>{<br>…循环体…<br>}</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/80c6f10e286440ec8419e7ac2cc60c72.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="for-语句"><a href="#for-语句" class="headerlink" title="for 语句"></a>for 语句</h2><blockquote>
+<p>for(初始化; 条件表达式; 改变条件的表达式)<br>{<br>…循环体…<br>}</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/7e7af6b0c67446699a17fe87d2bc221b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="do-while-语句"><a href="#do-while-语句" class="headerlink" title="do-while 语句"></a>do-while 语句</h2><blockquote>
+<p>do<br>{<br>…循环体…<br>}while(条件);</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/c4ec33023ef24b6c902bb7a2266fb4b1.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAb3ZvVG93bw==,size_11,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h3 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h3><blockquote>
+<p>求出小于n的所有素数</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);  <span class="comment">//从键盘输入一个正整数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;小于%d的素数有：\n&quot;</span>, n);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">2</span>; i &lt; n; i++)  <span class="comment">//循环:分别判断 2、3、...、n-1 是否为素数</span></span><br><span class="line">    &#123;</span><br><span class="line">        j = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (j &lt; i &amp;&amp; i % j != <span class="number">0</span>) <span class="comment">//循环:分别判断i是否能被 2 ~ i-1 整除</span></span><br><span class="line">            j++;</span><br><span class="line">        <span class="keyword">if</span> (j == i) <span class="comment">//i是素数</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d, &quot;</span>, i);</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">if</span> (count % <span class="number">6</span> == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>); <span class="comment">//控制每一行输出6个素数</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h3><blockquote>
+<p>打印三角形</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/3f390bd47ca8420ea9586a0d147ffcf9.png#pic_center" alt="在这里插入图片描述"></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j , n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="comment">//一共有n层</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//打印空格 第i层有 n-i 个空格</span></span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= n - i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//打印* 第i层有 2*i-1 个*</span></span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= <span class="number">2</span> * i - <span class="number">1</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//打印完一层换行到下一层</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>C语言学习笔记</category>
+      </categories>
+  </entry>
 </search>
